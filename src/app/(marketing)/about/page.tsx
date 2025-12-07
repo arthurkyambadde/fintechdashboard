@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { Users } from "lucide-react"
 
 export default function AboutPage() {
@@ -25,12 +26,14 @@ export default function AboutPage() {
             to bring you a platform that is powerful, intuitive, and reliable.
           </p>
         </div>
-        <div className="bg-muted rounded-xl aspect-video flex items-center justify-center text-muted-foreground relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-          <div className="z-10 flex flex-col items-center gap-2">
-            <Users className="h-12 w-12 opacity-50" />
-            <span className="font-medium">ApexEdge Team</span>
-          </div>
+        <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
+          <Image 
+            src="/team.png" 
+            alt="ApexEdge Team" 
+            fill 
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
 
